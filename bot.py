@@ -1,6 +1,7 @@
 from discord.ext.commands import Bot
+
 from commands import fortnite_tracker
-from main import constants
+from utils import constants
 
 client = Bot(command_prefix=constants.BOT_PREFIX)
 
