@@ -7,7 +7,7 @@ client = Bot(command_prefix=constants.BOT_PREFIX)
 
 
 def format_msg(msg):
-    return "```" + msg + "test```"
+    return "```" + msg + "```"
 
 
 @client.command(name='test')
