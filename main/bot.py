@@ -1,14 +1,17 @@
 from discord.ext.commands import Bot
-import fortnite_tracker
+from commands import fortnite_tracker
+from main import constants
 
-BOT_PREFIX = ("!")
-TOKEN = 'NDQwNTc1NDEzMzA4MDk2NTM3.DcjuoA.ywUUxF6oR5OrpLKmibuKotZXgqU'
-
-client = Bot(command_prefix=BOT_PREFIX)
+client = Bot(command_prefix=constants.BOT_PREFIX)
 
 
 def format_msg(msg):
-    return "```" + msg + "```"
+    return "```" + msg + "test```"
+
+
+@client.command(name='test')
+async def test():
+    await client.say(format_msg("test"))
 
 
 @client.command(name='Loboged')
@@ -31,4 +34,4 @@ async def fortnite_stats(nickname):
     await client.say(response)
 
 
-client.run(TOKEN)
+client.run(constants.TOKEN)
