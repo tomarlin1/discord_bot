@@ -37,7 +37,7 @@ async def elad_boged():
 
 
 @client.command(name='fortnite')
-async def fortnite_stats(nickname):
+async def fortnite_stats(*nickname):
     try:
         values = fortnite_tracker.get_stats(nickname)
         response_body = ""
