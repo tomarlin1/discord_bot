@@ -12,9 +12,9 @@ def flat(list_of_dicts):
     return dict1
 
 
-def get_stats(*nickname):
+def get_stats(nickname):
     connection = http.client.HTTPSConnection(URL)
-    url = URL_FORMAT.format(" ".join(nickname))
+    url = URL_FORMAT.format(nickname)
     connection.request("GET", url, headers=HEADERS)
     response = connection.getresponse()
     if response.code != 200:

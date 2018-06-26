@@ -39,7 +39,7 @@ async def elad_boged():
 @client.command(name='fortnite')
 async def fortnite_stats(*nickname):
     try:
-        values = fortnite_tracker.get_stats(nickname)
+        values = fortnite_tracker.get_stats(" ".join(nickname))
         response_body = ""
         for key in values.keys():
             response_body += key + ": " + values[key] + '\n'
